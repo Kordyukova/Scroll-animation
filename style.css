@@ -1,0 +1,135 @@
+body {
+  position: relative;
+  height: 3600px;
+  margin: 0 auto;
+  /*background-color:#FFF;*/
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+}
+
+.block{
+  position: fixed;
+  width: 100%;
+  height: 1000px;
+  -webkit-transition: opacity 1s;
+          transition: opacity 1s;
+}
+.block1 {
+  background-size: 120%;
+  z-index: 5;
+}
+.block2 {
+  background-size: 120%;
+  z-index: 4;
+}
+.block3 {
+  background-size: 120%;
+  z-index: 3;
+}
+.block4 {
+  background-size: 150%;
+  z-index: 2;
+}
+.block5 {
+  background-size: 130% ;
+  z-index: 1;
+}
+
+.container {
+  position: fixed;
+  left:43%;
+  top:100px;
+  z-index: 999;
+}
+
+@-webkit-keyframes flashing {
+  0% { background: red; }
+  20% { background: gold; }
+  40% { background: yellowgreen; }
+  60% { background: cornflowerblue; }
+  80% { background: purple; }
+  90% { background: violet; }
+  100% { background: red;}
+}
+@keyframes flashing {
+  0% { background: red; }
+  20% { background: gold; }
+  40% { background: yellowgreen; }
+  60% { background: cornflowerblue; }
+  80% { background: purple; }
+  90% { background: violet; }
+  100% { background: red;}
+}
+
+
+.stick1,
+.stick2,
+.stick3,
+.stick4 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background: white;
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+}
+.stick1.flash,
+.stick2.flash,
+.stick3.flash,
+.stick4.flash {
+  -webkit-animation: flashing 5s linear infinite;
+          animation: flashing 5s linear infinite;
+}
+
+/*кружочки*/
+.wrap {
+  position: relative;
+  height: 2000px;
+}
+
+#target1, #target2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#target1 {
+  top: 500px;
+  left: -200px;
+  background-color: blue;
+}
+
+#target2 {
+  top: 500px;
+  right: -200px;
+  background-color: red;
+}
+
+/*мячи*/
+section {
+  padding: 30px 90px;
+}
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.scroll-animation-obj {
+  opacity: 0;
+  transition: all 0.5s ease 0.5s;
+}
+.scroll-animation-hop {
+  transform: translate(0,60px);
+}
+.scroll-animation-left {
+  transform: translate(-120px,0);
+}
+.scroll-animation-right {
+  transform: translate(120px,0);
+}
